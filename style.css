@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: open-sans, sans-serif;
+}
+
+.topbanner {
+  background-color: #dbaa9b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}/*# sourceMappingURL=style.css.map */
