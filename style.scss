@@ -7,27 +7,3 @@
     box-sizing: border-box;
   }
 
-//variabler
-$topbar-bg: #dbaa9b;
-$text-color: white;
-$font-stack: open-sans, sans-serif;
-
-//body
-body {
-  font-family: $font-stack;
-}
-
-//topbanner
-.topbanner {
-  background-color: $topbar-bg;
-  color: $text-color;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  font-size: 14px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
