@@ -94,4 +94,112 @@ body {
   font-weight: 600;
   display: inline-flex;
   align-items: center;
+}
+
+.main-menu {
+  background-color: #9c4e27;
+  padding: 0 125px;
+}
+.main-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+.main-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 20px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.main-menu ul li a .arrow {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  margin-left: 6px;
+  margin-top: 2px;
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 500px;
+}
+.promo-grid .promo-item {
+  position: relative;
+  overflow: hidden;
+}
+.promo-grid .promo-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.promo-grid .promo-item .promo-text {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+}
+.promo-grid .promo-item .promo-text h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+.promo-grid .promo-item .promo-text h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.cta-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #DBAA9B;
+  padding: 60px 125px;
+  align-items: center;
+}
+.cta-section .cta-text h2 {
+  font-size: 28px;
+  color: #98502E;
+  margin-bottom: 15px;
+}
+.cta-section .cta-text p {
+  font-size: 16px;
+  color: #98502E;
+  margin-bottom: 25px;
+  max-width: 400px;
+}
+.cta-section .cta-text .cta-button {
+  background-color: #9c4e27;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+.cta-section .cta-text .cta-button:hover {
+  background-color: #733a1d;
+}
+.cta-section .cta-image {
+  text-align: right;
+}
+.cta-section .cta-image img {
+  max-width: 100%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */
