@@ -19,14 +19,10 @@ body {
   color: $text-color;
   @include flex-center;
   justify-content: space-between;
-  padding: 0 $padding-x;
   height: 34px;
   font-size: $font-size-base;
   line-height: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  margin-bottom: 0;
   z-index: 1000;
 }
 
@@ -38,7 +34,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px $padding-x;
-  margin-top: 34px;
   height: 80px;
   font-size: $font-size-base;
   position: relative;
@@ -237,3 +232,228 @@ body {
   }
 }
 
+//karousel section styling
+.carousel-section {
+  background: white;
+  padding: 40px $padding-x;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel-track {
+    display: flex;
+    justify-content: center; 
+    gap: 50px;
+    overflow: auto; 
+  }
+
+  .carousel-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    width: 210px; 
+    text-align: center;
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    img {
+      width: 100%; 
+      height: auto;
+    }
+  
+    .label {
+      background-color: #9c4e27;
+      color: white;
+      font-size: 10px; 
+      font-weight: bold;
+      padding: 2px 4px;
+      border-radius: 3px;
+      margin-bottom: 4px;
+    }
+  
+    .brand {
+      font-size: 10px;
+      color: #dbaa9b;
+      margin: 4px 0;
+    }
+  
+    .title {
+      font-size: 12px; 
+      font-weight: 600;
+      margin: 0;
+    }
+  
+    .desc {
+      font-size: 10px;
+      color: #555;
+      margin: 2px 0;
+    }
+  
+    .price {
+      font-weight: 700;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+  .carousel-arrow {
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+
+    &.left {
+      left: -20px;
+    }
+
+    &.right {
+      right: -20px;
+    }
+  }
+}
+
+// footer styling
+.site-footer {
+  background-color: $topbar-bg; 
+  color: $text-color;
+  padding: 40px $padding-x 20px;
+  font-size: 14px;
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .footer-container p, a, li {
+    line-height: 1.7;  }
+
+
+    .footer-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 130px;
+    
+      img {
+        height: 45px;
+        margin-bottom: 5px;
+      }
+    
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: $navbar-bg;
+    }
+
+    p {
+      margin: 5px 0;
+      color: $navbar-bg;
+      font-size: 12px;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 6px;
+      }
+    }
+
+    .footer-contact, .footer-links {
+  padding-top: 5px;
+}
+
+    .footer-links, .footer-contact {
+      a {
+        color: white;
+        text-decoration: none;
+    
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    
+      ul {
+        padding: 0;
+        list-style: none;
+    
+        li {
+          margin-bottom: 6px;
+        }
+      }
+    
+      p, a {
+        font-size: 14px;
+        color: white;
+      }
+    
+    
+      i {
+        color: white;
+        margin-right: 6px;
+      }
+    
+      .social-icons {
+        display: flex;
+        gap: 16px;
+    
+        a {
+          color: white;
+          font-size: 20px;
+    
+          &:hover {
+            color: darken(white, 15%);
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: white;
+  }
+  
+  .footer-bottom p {
+    color: white;
+  }

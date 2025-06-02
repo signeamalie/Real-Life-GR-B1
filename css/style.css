@@ -15,14 +15,10 @@ body {
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  padding: 0 125px;
   height: 34px;
   font-size: 15px;
   line-height: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  margin-bottom: 0;
   z-index: 1000;
 }
 
@@ -33,7 +29,6 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 125px;
-  margin-top: 34px;
   height: 80px;
   font-size: 15px;
   position: relative;
@@ -202,4 +197,192 @@ body {
 .cta-section .cta-image img {
   max-width: 100%;
   height: auto;
+}
+
+.carousel-section {
+  background: white;
+  padding: 40px 125px;
+}
+.carousel-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.carousel-section .carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.carousel-section .carousel-track {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  overflow: auto;
+}
+.carousel-section .carousel-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  width: 210px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-section .carousel-card img {
+  width: 100%;
+  height: auto;
+}
+.carousel-section .carousel-card .label {
+  background-color: #9c4e27;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+.carousel-section .carousel-card .brand {
+  font-size: 10px;
+  color: #dbaa9b;
+  margin: 4px 0;
+}
+.carousel-section .carousel-card .title {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+.carousel-section .carousel-card .desc {
+  font-size: 10px;
+  color: #555;
+  margin: 2px 0;
+}
+.carousel-section .carousel-card .price {
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.carousel-section .carousel-arrow {
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}
+.carousel-section .carousel-arrow.left {
+  left: -20px;
+}
+.carousel-section .carousel-arrow.right {
+  right: -20px;
+}
+
+.site-footer {
+  background-color: #dbaa9b;
+  color: white;
+  padding: 40px 125px 20px;
+  font-size: 14px;
+}
+.site-footer .footer-container {
+  display: grid;
+  grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr;
+  gap: 20px;
+  align-items: start;
+}
+.site-footer .footer-container p, .site-footer a, .site-footer li {
+  line-height: 1.7;
+}
+.site-footer .footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 130px;
+}
+.site-footer .footer-logo img {
+  height: 45px;
+  margin-bottom: 5px;
+}
+.site-footer h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #9c4e27;
+}
+.site-footer p {
+  margin: 5px 0;
+  color: #9c4e27;
+  font-size: 12px;
+}
+.site-footer h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+.site-footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer ul li {
+  margin-bottom: 6px;
+}
+.site-footer .footer-contact, .site-footer .footer-links {
+  padding-top: 5px;
+}
+.site-footer .footer-links a, .site-footer .footer-contact a {
+  color: white;
+  text-decoration: none;
+}
+.site-footer .footer-links a:hover, .site-footer .footer-contact a:hover {
+  text-decoration: underline;
+}
+.site-footer .footer-links ul, .site-footer .footer-contact ul {
+  padding: 0;
+  list-style: none;
+}
+.site-footer .footer-links ul li, .site-footer .footer-contact ul li {
+  margin-bottom: 6px;
+}
+.site-footer .footer-links p, .site-footer .footer-links a, .site-footer .footer-contact p, .site-footer .footer-contact a {
+  font-size: 14px;
+  color: white;
+}
+.site-footer .footer-links i, .site-footer .footer-contact i {
+  color: white;
+  margin-right: 6px;
+}
+.site-footer .footer-links .social-icons, .site-footer .footer-contact .social-icons {
+  display: flex;
+  gap: 16px;
+}
+.site-footer .footer-links .social-icons a, .site-footer .footer-contact .social-icons a {
+  color: white;
+  font-size: 20px;
+}
+.site-footer .footer-links .social-icons a:hover, .site-footer .footer-contact .social-icons a:hover {
+  color: #d9d9d9;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: white;
+}
+
+.footer-bottom p {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
