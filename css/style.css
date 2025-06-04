@@ -478,6 +478,11 @@ html, body {
   text-align: left;
 }
 
+.cta-landing.spejlvendt .cta-text {
+  justify-self: start;
+  padding-left: 120px;
+}
+
 .video-small-container .cta-videos {
   display: block;
 }
@@ -599,6 +604,47 @@ html, body {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 900px) {
+  .cta-landing,
+  .cta-landing-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .cta-landing .cta-video,
+  .cta-landing .cta-videos,
+  .cta-landing-videos .cta-video,
+  .cta-landing-videos .cta-videos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .cta-landing video,
+  .cta-landing img,
+  .cta-landing-videos video,
+  .cta-landing-videos img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    display: block;
+  }
+  .cta-landing .cta-text,
+  .cta-landing .cta-text-right,
+  .cta-landing-videos .cta-text,
+  .cta-landing-videos .cta-text-right {
+    margin: 0 auto 20px auto;
+    max-width: 300px;
+  }
+}
+.cta-landing.spejlvendt .cta-text {
+  justify-self: center;
+  padding-left: 0;
+}
+
 @media (max-width: 900px) {
   .site-footer {
     padding: 20px;

@@ -524,13 +524,19 @@ html, body {
   }
 }
 
-//spejlvendt sektioner
+// spejlvendt sektioner
 .cta-landing.spejlvendt, .cta-landing-videos.spejlvendt {
   grid-template-areas: "media text";
 
   .cta-text, .cta-text-right {
     text-align: left;
   }
+}
+
+// flytter teksten til højre i spejlvendt sektion
+.cta-landing.spejlvendt .cta-text {
+  justify-self: start;
+  padding-left: 120px; 
 }
 
 //layout for sektion 2 & 3 (mindre videoer)
@@ -640,6 +646,46 @@ html, body {
     grid-template-columns: 1fr;
   }
 }
+
+// cta video mobile responsivitet
+@media (max-width: 900px) {
+  .cta-landing,
+  .cta-landing-videos {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+
+    .cta-video,
+    .cta-videos {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    video,
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .cta-text,
+    .cta-text-right {
+      margin: 0 auto 20px auto;
+      max-width: 300px;
+      }
+    }
+  }
+
+  .cta-landing.spejlvendt .cta-text {
+    justify-self: center;
+    padding-left: 0;
+  }
+
 
 // footer styling på mobil
 @media (max-width: 900px) {
