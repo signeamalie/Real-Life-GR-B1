@@ -494,7 +494,7 @@ html, body {
   background-color: #dbaa9b;
 }
 
-video.focus-lower {
+.cta-video video.focus-lower {
   -o-object-position: 50% 70%;
      object-position: 50% 70%;
 }
