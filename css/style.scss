@@ -465,30 +465,30 @@ html, body {
 
 //cta styling for #2 html side
 .cta-landing,
-.cta-landing-images {
+.cta-landing-videos {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas: "text media";
   align-items: center;
-  gap: 40px;
-  padding: 60px $padding-x;
+  gap: 20px;
+  padding: 40px $padding-x;
 
   .cta-text,
   .cta-text-right {
+    grid-area: text;
     h2 {
       font-size: 28px;
-      color: #9c4e27; 
+      color: #9c4e27;
       font-weight: 700;
       margin-bottom: 15px;
     }
-
     p {
       font-size: 16px;
-      color: #9c4e27; 
-      line-height: 1.5; 
+      color: #9c4e27;
+      line-height: 1.5;
       max-width: 400px;
       margin-bottom: 25px;
     }
-
     .cta-button {
       background-color: #9c4e27;
       color: white;
@@ -505,52 +505,57 @@ html, body {
     }
   }
 
-  .cta-image,
-  .cta-images {
+  .cta-video, .cta-videos {
+    grid-area: media;
+    video,
     img {
       width: 100%;
-      border-radius: 8px;
+      height: 500px;
       object-fit: cover;
+      object-position: center;
+      display: block;
+      border-radius: 0;
     }
   }
 
-  .cta-images {
+  .cta-videos {
     display: flex;
     gap: 20px;
   }
 }
 
 //spejlvendt sektioner
-.cta-landing-images.spejlvendt {
-  grid-template-columns: 1fr 1fr;
+.cta-landing.spejlvendt, .cta-landing-videos.spejlvendt {
+  grid-template-areas: "media text";
 
-  .cta-text-right {
-    order: 1;
-    text-align: left;
-  }
-
-  .cta-images {
-    order: 2;
-  }
-}
-
-.cta-landing.spejlvendt {
-  grid-template-columns: 1fr 1fr;
-
-  .cta-image {
-    order: 1;
-  }
-
-  .cta-text {
-    order: 2;
+  .cta-text, .cta-text-right {
     text-align: left;
   }
 }
 
-.cta-landing-images,
-.cta-landing-images.spejlvendt {
+//layout for sektion 2 & 3 (mindre videoer)
+.video-small-container { .cta-videos {
+    display: block;
+  }
+    video {
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
+  }
+}
+
+//baggrundsfarve for sektion 2 & 3
+.cta-landing-videos, .cta-landing-videos.spejlvendt {
   background-color: #dbaa9b;
 }
+
+//fokus på video sektion 4
+video.focus-lower {
+  object-position: 50% 70%;
+}
+
 
 //mobile responsivitet
 @media (max-width: 900px) {
