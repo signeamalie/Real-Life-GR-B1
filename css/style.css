@@ -474,6 +474,11 @@ html, body {
   text-align: left;
 }
 
+.cta-landing-images,
+.cta-landing-images.spejlvendt {
+  background-color: #dbaa9b;
+}
+
 @media (max-width: 900px) {
   .topbanner {
     height: 34px;
