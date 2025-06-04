@@ -170,7 +170,7 @@ html, body {
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
-      color: white;
+      color: rgba(255, 255, 255, 0); // gennemsigtig da vi bruger billede som allerede har tekst på sig
 
       h2 {
         font-size: 32px;
