@@ -400,24 +400,24 @@ html, body {
   gap: 20px;
   padding: 40px 125px;
 }
-.cta-landing .cta-text,
+.cta-landing .cta-text2,
 .cta-landing .cta-text-right,
-.cta-landing-videos .cta-text,
+.cta-landing-videos .cta-text2,
 .cta-landing-videos .cta-text-right {
   grid-area: text;
 }
-.cta-landing .cta-text h2,
+.cta-landing .cta-text2 h2,
 .cta-landing .cta-text-right h2,
-.cta-landing-videos .cta-text h2,
+.cta-landing-videos .cta-text2 h2,
 .cta-landing-videos .cta-text-right h2 {
   font-size: 28px;
   color: #9c4e27;
   font-weight: 700;
   margin-bottom: 15px;
 }
-.cta-landing .cta-text p,
+.cta-landing .cta-text2 p,
 .cta-landing .cta-text-right p,
-.cta-landing-videos .cta-text p,
+.cta-landing-videos .cta-text2 p,
 .cta-landing-videos .cta-text-right p {
   font-size: 16px;
   color: #9c4e27;
@@ -425,10 +425,17 @@ html, body {
   max-width: 400px;
   margin-bottom: 25px;
 }
-.cta-landing .cta-text .cta-button,
-.cta-landing .cta-text-right .cta-button,
-.cta-landing-videos .cta-text .cta-button,
-.cta-landing-videos .cta-text-right .cta-button {
+.cta-landing .cta-text2 .cta-landing.spejlvendt .cta-text2,
+.cta-landing .cta-text-right .cta-landing.spejlvendt .cta-text2,
+.cta-landing-videos .cta-text2 .cta-landing.spejlvendt .cta-text2,
+.cta-landing-videos .cta-text-right .cta-landing.spejlvendt .cta-text2 {
+  justify-self: start;
+  padding-left: 120px;
+}
+.cta-landing .cta-text2 .cta-button2,
+.cta-landing .cta-text-right .cta-button2,
+.cta-landing-videos .cta-text2 .cta-button2,
+.cta-landing-videos .cta-text-right .cta-button2 {
   background-color: #9c4e27;
   color: white;
   text-decoration: none;
@@ -438,10 +445,10 @@ html, body {
   display: inline-block;
   transition: background-color 0.2s;
 }
-.cta-landing .cta-text .cta-button:hover,
-.cta-landing .cta-text-right .cta-button:hover,
-.cta-landing-videos .cta-text .cta-button:hover,
-.cta-landing-videos .cta-text-right .cta-button:hover {
+.cta-landing .cta-text2 .cta-button2:hover,
+.cta-landing .cta-text-right .cta-button2:hover,
+.cta-landing-videos .cta-text2 .cta-button2:hover,
+.cta-landing-videos .cta-text-right .cta-button2:hover {
   background-color: #733a1d;
 }
 .cta-landing .cta-video, .cta-landing .cta-videos,
@@ -476,11 +483,6 @@ html, body {
 }
 .cta-landing.spejlvendt .cta-text, .cta-landing.spejlvendt .cta-text-right, .cta-landing-videos.spejlvendt .cta-text, .cta-landing-videos.spejlvendt .cta-text-right {
   text-align: left;
-}
-
-.cta-landing.spejlvendt .cta-text {
-  justify-self: start;
-  padding-left: 120px;
 }
 
 .video-small-container .cta-videos {
