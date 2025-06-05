@@ -590,10 +590,10 @@ html, body {
   }
   .cta-landing,
   .cta-landing-videos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    text-align: center;
   }
   .cta-landing .cta-video,
   .cta-landing .cta-videos,

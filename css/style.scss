@@ -558,44 +558,48 @@ html, body {
 
 // cta video mobile responsivitet
 @media (max-width: 900px) {
-.promo-grid,
-  .cta-section {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-landing,
-  .cta-landing-videos {
-    @include two-column-grid();
-
-    .cta-video,
-    .cta-videos {
-      width: 100%;
+    .promo-grid,
+    .cta-section {
+      grid-template-columns: 1fr;
+    }
+  
+    .cta-landing,
+    .cta-landing-videos {
       display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    video,
-    img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      object-fit: contain;
-      display: block;
-    }
-
-    .cta-text, .cta-text2,
-    .cta-text-right, .cta-landing.spejlvendt {
-      margin: 0 auto 20px auto;
-      max-width: 300px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+      .cta-video,
+      .cta-videos {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+  
+      video,
+      img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+      }
+  
+      .cta-text, .cta-text2,
+      .cta-text-right, .cta-landing.spejlvendt {
+        margin: 0 auto 20px auto;
+        max-width: 300px;
       }
     }
-
-  .cta-landing.spejlvendt .cta-text2 {
-    justify-self: center;
-    padding-left: 0;
+  
+    .cta-landing.spejlvendt .cta-text2 {
+      justify-self: center;
+      padding-left: 0;
+    }
   }
-}
+
 
 
 // footer styling på mobil
