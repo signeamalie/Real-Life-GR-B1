@@ -133,12 +133,7 @@ html, body {
 
         //skaber en pil som indikerer dropdown
         .arrow {
-          display: inline-block;
-          width: 6px;
-          height: 6px;
-          border-right: 2px solid white;
-          border-bottom: 2px solid white;
-          transform: rotate(45deg);
+          @include arrow;
           margin-left: 6px;
           margin-top: 2px;
         }
@@ -189,10 +184,9 @@ html, body {
 
 //cta landing page styling
 .cta-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: #DBAA9B;
-  padding: 60px $padding-x;
+    @include two-column-grid();
+    background-color: #DBAA9B;
+    padding: 60px $padding-x;
   align-items: center;
 
   .cta-text, .cta-text-right {
@@ -362,11 +356,6 @@ html, body {
       color: white;
     }
 
-    a {
-      text-decoration: none;
-      color: white;
-      font-size: 14px;
-    }
 
     ul {
       list-style: none;
@@ -378,52 +367,23 @@ html, body {
       }
     }
 
-    .footer-contact, .footer-links {
-  padding-top: 5px;
-}
-
     .footer-links, .footer-contact {
-      a {
-        color: white;
-        text-decoration: none;
-    
-        &:hover {
-          text-decoration: underline;
-        }
+      a:not(.social-icons a) {
+        @include footer-link-style;
       }
     
-      ul {
-        padding: 0;
-        list-style: none;
-    
-        li {
-          margin-bottom: 6px;
-        }
-      }
-    
-      p, a {
+      p, a:not(.social-icons a) {
         font-size: 14px;
         color: white;
       }
-    
     
       i {
         color: white;
         margin-right: 6px;
       }
     
-      .social-icons {
-        display: flex;
-        gap: 16px;
-    
-        a {
-          color: white;
-          font-size: 20px;
-    
-          &:hover {
-            color: darken(white, 15%);
-          }
-        }
+      .social-icons a {
+        @include social-icon-style;
       }
     }
   }
@@ -605,10 +565,7 @@ html, body {
 
   .cta-landing,
   .cta-landing-videos {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center;
+    @include two-column-grid();
 
     .cta-video,
     .cta-videos {

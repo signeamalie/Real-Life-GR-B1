@@ -166,6 +166,8 @@ html, body {
 .cta-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
   background-color: #DBAA9B;
   padding: 60px 125px;
   align-items: center;
@@ -331,11 +333,6 @@ html, body {
   margin-bottom: 10px;
   color: white;
 }
-.site-footer a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-}
 .site-footer ul {
   list-style: none;
   padding: 0;
@@ -344,34 +341,21 @@ html, body {
 .site-footer ul li {
   margin-bottom: 6px;
 }
-.site-footer .footer-contact, .site-footer .footer-links {
-  padding-top: 5px;
-}
-.site-footer .footer-links a, .site-footer .footer-contact a {
+.site-footer .footer-links a:not(.social-icons a), .site-footer .footer-contact a:not(.social-icons a) {
   color: white;
   text-decoration: none;
+  font-size: 14px;
 }
-.site-footer .footer-links a:hover, .site-footer .footer-contact a:hover {
+.site-footer .footer-links a:not(.social-icons a):hover, .site-footer .footer-contact a:not(.social-icons a):hover {
   text-decoration: underline;
 }
-.site-footer .footer-links ul, .site-footer .footer-contact ul {
-  padding: 0;
-  list-style: none;
-}
-.site-footer .footer-links ul li, .site-footer .footer-contact ul li {
-  margin-bottom: 6px;
-}
-.site-footer .footer-links p, .site-footer .footer-links a, .site-footer .footer-contact p, .site-footer .footer-contact a {
+.site-footer .footer-links p, .site-footer .footer-links a:not(.social-icons a), .site-footer .footer-contact p, .site-footer .footer-contact a:not(.social-icons a) {
   font-size: 14px;
   color: white;
 }
 .site-footer .footer-links i, .site-footer .footer-contact i {
   color: white;
   margin-right: 6px;
-}
-.site-footer .footer-links .social-icons, .site-footer .footer-contact .social-icons {
-  display: flex;
-  gap: 16px;
 }
 .site-footer .footer-links .social-icons a, .site-footer .footer-contact .social-icons a {
   color: white;
@@ -606,10 +590,10 @@ html, body {
   }
   .cta-landing,
   .cta-landing-videos {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    text-align: center;
+    gap: 20px;
   }
   .cta-landing .cta-video,
   .cta-landing .cta-videos,

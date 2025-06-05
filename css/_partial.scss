@@ -20,6 +20,16 @@ $padding-x: 125px;
   margin-right: $margin;
 }
 
+// pil til dropdowns og karouseller
+@mixin arrow($size: 6px, $thickness: 2px, $color: white) {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  border-right: $thickness solid $color;
+  border-bottom: $thickness solid $color;
+  transform: rotate(45deg);
+}
+
 // cta text
 @mixin cta-text-style($text-color: #98502E, $heading-size: 28px, $paragraph-size: 16px) {
   h2 {
@@ -54,4 +64,31 @@ $padding-x: 125px;
   }
 }
 
+// column grid
+@mixin two-column-grid($gap: 20px) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: $gap;
+}
 
+// footer links
+@mixin footer-link-style {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ikoner i footer
+@mixin social-icon-style {
+  color: white;
+  font-size: 20px;
+
+  &:hover {
+    color: darken(white, 15%);
+  }
+}
