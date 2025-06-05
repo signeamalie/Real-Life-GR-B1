@@ -7,15 +7,51 @@ $font-size-base: 15px;
 $padding-x: 125px;
 
 // mixins
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+//ikoner
 @mixin icon($size: 18px, $margin: 4px) {
   font-size: $size;
   margin-right: $margin;
+}
+
+// cta text
+@mixin cta-text-style($text-color: #98502E, $heading-size: 28px, $paragraph-size: 16px) {
+  h2 {
+    font-size: $heading-size;
+    color: $text-color;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: $paragraph-size;
+    color: $text-color;
+    margin-bottom: 25px;
+    max-width: 400px;
+    line-height: 1.5;
+  }
+}
+
+// cta buttons
+@mixin cta-button-style($bg-color: $navbar-bg, $hover-darken: 10%) {
+  background-color: $bg-color;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: darken($bg-color, $hover-darken);
+  }
 }
 
 
