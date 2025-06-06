@@ -20,7 +20,7 @@ $padding-x: 125px;
   margin-right: $margin;
 }
 
-// pil til dropdowns og karouseller
+// pil til dropdown
 @mixin arrow($size: 6px, $thickness: 2px, $color: white) {
   display: inline-block;
   width: $size;
