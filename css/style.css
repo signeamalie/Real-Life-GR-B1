@@ -164,46 +164,120 @@ html, body {
 }
 
 .cta-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 20px;
-  background-color: #DBAA9B;
+  background-color: #dbaa9b;
   padding: 60px 125px;
+}
+.cta-section .cta-wrapper {
+  display: flex;
+  gap: 60px;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.cta-section .cta-text h2, .cta-section .cta-text-right h2 {
-  font-size: 28px;
-  color: #98502E;
-  font-weight: 700;
-  margin-bottom: 15px;
+.cta-section .shelf-carousel {
+  flex: 1.5;
+  min-width: 650px;
+  min-height: 420px;
+  max-width: 700px;
+  background-image: url("../images/ugens_fund_reol.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 80px 30px;
+  overflow: hidden;
 }
-.cta-section .cta-text p, .cta-section .cta-text-right p {
-  font-size: 16px;
-  color: #98502E;
-  margin-bottom: 25px;
-  max-width: 400px;
-  line-height: 1.5;
+.cta-section .product-track {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
 }
-.cta-section .cta-text .cta-button, .cta-section .cta-text-right .cta-button {
+.cta-section .product-card {
+  flex: 0 0 30%;
+  max-width: 190px;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+.cta-section .product-card:hover {
+  transform: scale(1.08);
+}
+.cta-section .product-card:hover .info {
+  opacity: 1;
+  visibility: visible;
+}
+.cta-section .product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.cta-section .product-card .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px;
+  border-radius: 0 0 6px 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.cta-section .product-card .info p {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+}
+.cta-section .product-card .info span {
+  font-weight: bold;
+  color: #9c4e27;
+}
+.cta-section .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: #9c4e27;
   color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 2;
+}
+.cta-section .arrow.left {
+  left: 10px;
+}
+.cta-section .arrow.right {
+  right: 10px;
+}
+.cta-section .cta-text {
+  flex: 1;
+  max-width: 400px;
+}
+.cta-section .cta-text h2 {
+  font-size: 26px;
+  color: #5d2d1e;
+  margin-bottom: 10px;
+}
+.cta-section .cta-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.cta-section .cta-text .cta-button {
+  background-color: #5d2d1e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
   font-weight: 600;
-  display: inline-block;
-  transition: background-color 0.2s;
-}
-.cta-section .cta-text .cta-button:hover, .cta-section .cta-text-right .cta-button:hover {
-  background-color: #733a1d;
-}
-.cta-section .cta-image {
-  text-align: right;
-}
-.cta-section .cta-image img {
-  max-width: 100%;
-  height: auto;
+  text-decoration: none;
 }
 
 .carousel-section {
@@ -627,6 +701,20 @@ html, body {
   .cta-landing.spejlvendt .cta-text2 {
     justify-self: center;
     padding-left: 0;
+  }
+}
+@media (max-width: 900px) {
+  .cta-section .cta-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .cta-section .shelf-carousel {
+    padding: 60px 10px;
+    background-size: cover;
+  }
+  .cta-section .product-track {
+    gap: 20px;
   }
 }
 @media (max-width: 900px) {

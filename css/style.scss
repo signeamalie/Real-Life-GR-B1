@@ -182,30 +182,146 @@ html, body {
   }
 }
 
-//cta landing page styling
+// CTA sektion styling
 .cta-section {
-    @include two-column-grid();
-    background-color: #DBAA9B;
-    padding: 60px $padding-x;
-  align-items: center;
+  background-color: #dbaa9b;
+  padding: 60px $padding-x;
 
-  .cta-text, .cta-text-right {
-    @include cta-text-style(); 
+  .cta-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-    .cta-button {
-      @include cta-button-style(); 
+  .shelf-carousel {
+    flex: 1.5;
+    min-width: 650px;
+    min-height: 420px;
+    max-width: 700px;
+    background-image: url('../images/ugens_fund_reol.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 80px 30px;
+    overflow: hidden;
+  }
+
+  .product-track {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  .product-card {
+    flex: 0 0 30%;
+    max-width: 190px;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.08);
+
+      .info {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 8px;
+      border-radius: 0 0 6px 6px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+
+      p {
+        font-size: 14px;
+        margin: 0;
+        font-weight: 500;
+        color: #333;
+      }
+
+      span {
+        font-weight: bold;
+        color: #9c4e27;
+      }
     }
   }
 
-  .cta-image {
-    text-align: right;
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #9c4e27;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 2;
 
-    img {
-      max-width: 100%;
-      height: auto;
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+  }
+
+  .cta-text {
+    flex: 1;
+    max-width: 400px;
+
+    h2 {
+      font-size: 26px;
+      color: #5d2d1e;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      background-color: #5d2d1e;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
     }
   }
 }
+
+
+
+
+
+
 
 //karousel section styling
 .carousel-section {
@@ -599,6 +715,24 @@ html, body {
       padding-left: 0;
     }
   }
+
+  // CTA sektion  styling på mobil
+@media (max-width: 900px) {
+  .cta-section .cta-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .cta-section .shelf-carousel {
+    padding: 60px 10px;
+    background-size: cover;
+  }
+
+  .cta-section .product-track {
+    gap: 20px;
+  }
+}
 
 
 
