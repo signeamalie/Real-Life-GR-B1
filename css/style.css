@@ -554,6 +554,11 @@ html, body {
      object-fit: contain;
 }
 
+.cta-landing-videos.video-small-container {
+  justify-items: center;
+  align-items: center;
+}
+
 .cta-landing-videos, .cta-landing-videos.spejlvendt {
   background-color: #dbaa9b;
 }

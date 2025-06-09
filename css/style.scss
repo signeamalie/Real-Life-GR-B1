@@ -586,6 +586,12 @@ html, body {
   }
 }
 
+// layout for sektion 2 & 3 
+.cta-landing-videos.video-small-container {
+  justify-items: center; 
+  align-items: center;  
+}
+
 // baggrundsfarve for sektion 2 & 3
 .cta-landing-videos, .cta-landing-videos.spejlvendt {
   background-color: #dbaa9b;
