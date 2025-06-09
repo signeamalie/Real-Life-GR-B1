@@ -205,7 +205,6 @@ html, body {
     background-size: contain;
     background-position: center;
     display: flex;
-    align-items: center;
     position: relative;
     padding: 80px 30px;
     overflow: hidden;
@@ -213,10 +212,12 @@ html, body {
 
   .product-track {
     display: flex;
-    gap: 10px;
+    gap: 0px;
     width: 100%;
     overflow: hidden;
     scroll-snap-type: x mandatory;
+    padding-left: 70px;
+    width: calc(100% - 20px);
   }
 
   .product-card {
@@ -226,6 +227,8 @@ html, body {
     transition: transform 0.3s ease;
     position: relative;
     text-align: center;
+    margin-top: 20px;
+    flex: 0 0 calc(100% / 3);
 
     &:hover {
       transform: scale(1.08);

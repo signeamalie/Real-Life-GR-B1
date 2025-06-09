@@ -184,17 +184,18 @@ html, body {
   background-size: contain;
   background-position: center;
   display: flex;
-  align-items: center;
   position: relative;
   padding: 80px 30px;
   overflow: hidden;
 }
 .cta-section .product-track {
   display: flex;
-  gap: 10px;
+  gap: 0px;
   width: 100%;
   overflow: hidden;
   scroll-snap-type: x mandatory;
+  padding-left: 70px;
+  width: calc(100% - 20px);
 }
 .cta-section .product-card {
   flex: 0 0 30%;
@@ -203,6 +204,8 @@ html, body {
   transition: transform 0.3s ease;
   position: relative;
   text-align: center;
+  margin-top: 20px;
+  flex: 0 0 33.3333333333%;
 }
 .cta-section .product-card:hover {
   transform: scale(1.08);
