@@ -297,6 +297,7 @@ html, body {
   .cta-text {
     flex: 1;
     max-width: 400px;
+    min-width: 300px;
 
     h2 {
       font-size: 26px;
@@ -320,11 +321,6 @@ html, body {
     }
   }
 }
-
-
-
-
-
 
 
 //karousel section styling
@@ -731,7 +727,7 @@ html, body {
     }
   }
 
-  // CTA sektion  styling på mobil
+  // CTA sektion styling på mobil
 @media (max-width: 900px) {
   .cta-section {
     padding: 40px 20px;
@@ -806,6 +802,24 @@ html, body {
   }
 }
 
+// CTA sektion styling tablet
+@media (max-width: 850px) {
+  .cta-section .cta-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta-section .cta-text {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cta-section .shelf-carousel {
+    margin-bottom: 30px;
+  }
+}
 
 // footer styling på mobil
 @media (max-width: 900px) {
