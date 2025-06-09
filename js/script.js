@@ -1,3 +1,8 @@
+//js fil 
+
+'user strict';
+
+// shelf carousel til CTA sektion
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.product-track');
   const leftArrow = document.querySelector('.arrow.left');
