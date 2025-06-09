@@ -459,6 +459,7 @@ html, body {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "text media";
   align-items: center;
+  justify-content: center;
   gap: 20px;
   padding: 40px 125px;
 }
@@ -510,6 +511,9 @@ html, body {
 .cta-landing-videos .cta-video,
 .cta-landing-videos .cta-videos {
   grid-area: media;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cta-landing .cta-video video,
 .cta-landing .cta-video img, .cta-landing .cta-videos video,
@@ -535,7 +539,7 @@ html, body {
 
 .cta-landing.spejlvendt .cta-text2 {
   justify-self: start;
-  padding-left: 120px;
+  padding-left: 80px;
 }
 
 .cta-landing.spejlvendt, .cta-landing-videos.spejlvendt {
@@ -560,6 +564,7 @@ html, body {
 .cta-landing-videos.video-small-container {
   justify-items: center;
   align-items: center;
+  gap: 10px;
 }
 
 .cta-landing-videos, .cta-landing-videos.spejlvendt {

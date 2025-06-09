@@ -527,6 +527,7 @@ html, body {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "text media";
   align-items: center;
+  justify-content: center; 
   gap: 20px;
   padding: 40px $padding-x;
 
@@ -542,6 +543,9 @@ html, body {
 
   .cta-video, .cta-videos {
     grid-area: media;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 
     video,
     img {
@@ -563,7 +567,7 @@ html, body {
 // flytter teksten til højre for spejlvendt sektion
 .cta-landing.spejlvendt .cta-text2 {
   justify-self: start;
-  padding-left: 120px;
+  padding-left: 80px; 
 }
 
 // spejlvendt sektioner
@@ -594,6 +598,7 @@ html, body {
 .cta-landing-videos.video-small-container {
   justify-items: center; 
   align-items: center;  
+  gap: 10px; 
 }
 
 // baggrundsfarve for sektion 2 & 3
